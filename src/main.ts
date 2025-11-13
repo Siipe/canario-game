@@ -1,6 +1,6 @@
 import Phaser from 'phaser';
 
 import './style.css';
-import { config } from './config/game.config';
+import { config2 } from './config/game.config';
 
-const game = new Phaser.Game(config);
+new Phaser.Game(config2);

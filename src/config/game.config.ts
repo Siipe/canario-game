@@ -1,7 +1,8 @@
 import Phaser from 'phaser';
 
 import { sizes, speedDown } from '../consts/game.consts';
-import { GameScene } from '../scenes/game.scene2';
+import { GameScene as GameScene3 } from '../scenes/game.scene3';
+import { GameScene } from '../scenes/game.scene';
 
 export const config: Phaser.Types.Core.GameConfig = {
   type: Phaser.WEBGL,
@@ -21,4 +22,19 @@ export const config: Phaser.Types.Core.GameConfig = {
     autoCenter: Phaser.Scale.CENTER_HORIZONTALLY,
   },
   backgroundColor: '#000000',
+};
+
+export const config2: Phaser.Types.Core.GameConfig = {
+  type: Phaser.WEBGL,
+  width: 800,
+  height: 600,
+  scene: [GameScene3],
+  canvas: document.querySelector<HTMLCanvasElement>('#gameCanvas')!,
+  physics: {
+    default: 'arcade',
+    arcade: {
+      gravity: { y: 300, x: 0 },
+      debug: false,
+    },
+  },
 };
